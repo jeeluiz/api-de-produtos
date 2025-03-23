@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/api-de-produtos.slnx",
+                "${workspaceFolder}/api-de-produtos.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/api-de-produtos.slnx",
+                "${workspaceFolder}/api-de-produtos.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/api-de-produtos.slnx"
+                "${workspaceFolder}/api-de-produtos.sln"
             ],
             "problemMatcher": "$msCompile"
         }

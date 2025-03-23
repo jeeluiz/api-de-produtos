@@ -1,8 +1,7 @@
 using FluentValidation;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
-
+using Produto.Api.Middlewares;
 using Produto.Api;
 using Produto.Application;
 using Produto.Application.Dtos;
@@ -30,6 +29,8 @@ if (app.Environment.IsDevelopment()) {
     });
 }
 
+// Adiciona o middleware de tratamento global de exceções
+app.UseMiddleware<GlobalExceptionMiddleware>();
 /* -------------------------------- Endpoints ------------------------------- */
 
 // Redirects para o swagger (facilitar testes)
@@ -37,6 +38,10 @@ app.MapGet("/", () => Results.Redirect("/swagger/index.html"))
     .ExcludeFromDescription();
 app.MapGet("/index.html", () => Results.Redirect("/swagger/index.html"))
     .ExcludeFromDescription();
+
+app.MapGet("/exception", () => {
+    throw new Exception("Teste de exceção");
+});
 
 app.MapGet(
     "/produtos",
