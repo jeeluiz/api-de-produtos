@@ -12,28 +12,14 @@
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger"
+
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "justMyCode": true,
-            "launchBrowser": {
-                "enabled": true,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open",
-                    "args": "${auto-detect-url}"
-                },
-                "linux": {
-                    "command": "xdg-open",
-                    "args": "${auto-detect-url}"
-                }
-            }
         },
     ]
 }
