@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch .NET Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Produto.Api/bin/Debug/net9.0/Produto.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Produto.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "justMyCode": true,
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
+                "osx": {
+                    "command": "open",
+                    "args": "${auto-detect-url}"
+                },
+                "linux": {
+                    "command": "xdg-open",
+                    "args": "${auto-detect-url}"
+                }
+            }
+        },
+    ]
+}
