@@ -50,4 +50,23 @@ dotnet tool run dotnet-ef database update --project src/Produto.Data/Produto.Dat
 
 ## Execução
 
+Para executar a API, utilize o seguinte comando:
+
+```bash
+dotnet run --project src/Produto.Api/Produto.Api.csproj
+```
+
+A API estará disponível em `http://localhost:5087`.
+
 ## Testes
+
+Para executar os testes do projeto, utilize o comando:
+
+```bash
+dotnet test
+```
+
+Os testes incluem:
+
+- Testes unitários
+- Testes de integração
